@@ -4,13 +4,15 @@
 
 TARGET	= ft_nm
 
-CFLAGS	= -Wall -Wextra -g #-Werror
+CFLAGS	= -Wall -Wextra -Werror
 CC		= gcc
 
 INC 	= -I ./include -I ./libft
+HEADERS = ft_nm.h
+DEPS	= ${addprefix include/, ${HEADERS}}
 
 SRCDIR	= ./src/
-SRC		= main.c list_helpers.c sections.c symbols.c
+SRC		= main.c sections.c list_helpers.c symbols.c options.c sort.c
 OBJDIR	= ./objs/
 OBJS	= ${addprefix ${OBJDIR}, ${SRC:.c=.o}}
 
@@ -34,7 +36,7 @@ CLEAN = ${RED}Cleaning${RESET}
 #				COMPILATION RULES				 #
 ##################################################
 
-${OBJDIR}%.o: ${SRCDIR}%.c
+${OBJDIR}%.o: ${SRCDIR}%.c ${DEPS}
 	@echo "${COMPILE} $<"
 	@${CC} ${CFLAGS} -c $< ${INC} -o $@
 

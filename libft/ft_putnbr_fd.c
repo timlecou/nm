@@ -6,7 +6,7 @@
 /*   By: mamartin <mamartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 18:33:39 by mamartin          #+#    #+#             */
-/*   Updated: 2020/09/16 18:47:11 by mamartin         ###   ########.fr       */
+/*   Updated: 2022/11/06 17:22:17 by mamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,9 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		ft_putchar_fd(nbr + '0', fd);
+}
+
+void	ft_putnbr(int n)
+{
+	ft_putnbr_fd(n, 1);
 }

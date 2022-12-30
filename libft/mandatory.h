@@ -6,7 +6,7 @@
 /*   By: mamartin <mamartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 22:38:01 by mamartin          #+#    #+#             */
-/*   Updated: 2022/09/17 22:56:55 by mamartin         ###   ########.fr       */
+/*   Updated: 2022/11/06 17:21:21 by mamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,10 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(const char *s, int fd);
 void			ft_putendl_fd(const char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+void			ft_putchar(char c);
+void			ft_putstr(const char *s);
+void			ft_putendl(const char *s);
+void			ft_putnbr(int n);
 
 /*
 **	LINKED LIST FUNCTIONS
